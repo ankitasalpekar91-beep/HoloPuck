@@ -87,17 +87,21 @@ The application follows these basic steps:
 
 📂 Project Structure
 
-The project files can be organized in the following way:
-
 HoloPuck/
 │
 ├── README.md
+├── explanation.md      (team guide + Image Processing syllabus mapping)
 ├── LICENSE
 ├── .gitignore
-├── main.py
-└── requirements.txt
+├── main.py             (run this: webcam loop, keys, options)
+├── vision.py           (perspective transform, hand trackers, smoothing)
+├── game.py             (puck physics, scoring, computer opponent)
+├── render.py           (drawing the table and HUD)
+├── requirements.txt
+└── tests/
+    └── test_holopuck.py
 
-"main.py" represents the main application file, and "requirements.txt" lists the required Python libraries. The structure should be adjusted to match the actual files in the repository.
+See "explanation.md" for how each file connects to the Image Processing syllabus.
 
 💻 Requirements
 
@@ -128,19 +132,20 @@ cd HoloPuck
 
 3. Install the dependencies
 
-If a "requirements.txt" file is available:
-
 pip install -r requirements.txt
-
-Otherwise, install the main libraries:
-
-pip install opencv-python mediapipe numpy
 
 4. Run the application
 
-python main.py
+python main.py              (hand tracking with MediaPipe)
+python main.py --classic    (classical skin-colour tracking, no ML model)
+python main.py --mouse      (mouse control, no hand tracking)
 
-Use the actual Python filename if the main application has a different name. Make sure the required dependencies are installed before running the program.
+The MediaPipe hand model (about 8 MB) is downloaded automatically on the first run.
+Keys: 1/2/3 difficulty, P perspective, H landmarks, M mask view (--classic), R restart, Q quit.
+
+5. Run the tests
+
+python -m unittest discover -s tests -v
 
 🌐 Applications
 
