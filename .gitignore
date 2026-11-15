@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# HoloPuck: hand-tracking model (~8 MB) is downloaded on first run, never commit it
+hand_landmarker.task
+hand_landmarker.task.part
+
+# HoloPuck: output of `python main.py --snapshot out.png`
+out.png
+snapshot*.png
