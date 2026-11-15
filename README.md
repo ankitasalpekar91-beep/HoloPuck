@@ -14,7 +14,7 @@ The project uses **OpenCV** to process live video and **MediaPipe** to detect ha
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 | You are... | Read |
 |---|---|
@@ -25,7 +25,7 @@ The project uses **OpenCV** to process live video and **MediaPipe** to detect ha
 
 ---
 
-## 🚀 Quick start
+## Quick start
 
 **Requirements:** Python 3.10 or newer, a laptop or desktop with a webcam, and a keyboard. (MediaPipe does not always publish packages for the very newest Python; 3.10-3.12 is the safest. The tests and the headless snapshot also ran fine on 3.13 with current library releases.)
 
@@ -72,7 +72,7 @@ If no webcam can be opened, HoloPuck falls back to mouse control on a plain back
 
 ---
 
-## ✨ Features
+## Features
 
 - **Real-time hand tracking**: the index fingertip is the control point for the mallet.
 - **Two trackers**: MediaPipe (machine-learning model) and a classical pipeline (blur → YCrCb skin threshold → morphology → contours → topmost point).
@@ -85,7 +85,7 @@ If no webcam can be opened, HoloPuck falls back to mouse control on a plain back
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 | Technology | Purpose |
 |---|---|
@@ -97,7 +97,7 @@ If no webcam can be opened, HoloPuck falls back to mouse control on a plain back
 
 ---
 
-## 📂 Project structure
+## Project structure
 
 ```text
 HoloPuck/
@@ -121,7 +121,7 @@ HoloPuck/
 
 ---
 
-## 🧠 Image-processing concepts used
+## Image-processing concepts used
 
 1. **Image acquisition**: each webcam frame is a NumPy array (height × width × 3).
 2. **Colour-space conversion**: BGR → RGB for MediaPipe; BGR → YCrCb for skin segmentation.
@@ -138,7 +138,7 @@ HoloPuck/
 
 ---
 
-## ✅ Testing and current status
+## Testing and current status
 
 ```bash
 python -m unittest discover -s tests -v        # 16 tests
@@ -147,19 +147,19 @@ python main.py --snapshot out.png              # headless smoke test, no camera 
 
 | Area | Status |
 |---|---|
-| Physics, goals, scoring, collisions, no-tunnelling | ✅ covered by automated tests |
-| Perspective transform round-trip, overlay, smoothing | ✅ covered by automated tests |
-| Classical tracker on a synthetic hand | ✅ covered by automated tests |
-| Game runs end to end headlessly | ✅ `--snapshot` works |
-| MediaPipe API compatibility | ✅ the hand-landmarker API imports and is used correctly |
-| **MediaPipe tracker on a real hand, real webcam** | ⚠️ **not yet tested** |
-| **Tuning on a real camera and room lighting** | ⚠️ **not yet tested** |
+| Physics, goals, scoring, collisions, no-tunnelling | covered by automated tests |
+| Perspective transform round-trip, overlay, smoothing | covered by automated tests |
+| Classical tracker on a synthetic hand | covered by automated tests |
+| Game runs end to end headlessly | `--snapshot` works |
+| MediaPipe API compatibility | the hand-landmarker API imports and is used correctly |
+| **MediaPipe tracker on a real hand, real webcam** | **not yet tested** |
+| **Tuning on a real camera and room lighting** | **not yet tested** |
 
 The tracker thresholds (skin range, smoothing α, where the table sits in the frame) may need small adjustments for your camera and lighting. The constants are at the top of `vision.py`.
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 | Problem | What to do |
 |---|---|
@@ -172,11 +172,11 @@ The tracker thresholds (skin range, smoothing α, where the table sits in the fr
 
 ---
 
-## 🌐 Applications
+## Applications
 
 Gesture-controlled games, touch-free interfaces, computer-vision learning, interactive teaching, AR demonstrations and hand-tracking experiments.
 
-## 🔮 Future scope
+## Future scope
 
 - Detect a real table or marker (for example ArUco) and compute the perspective transform from it.
 - Two-player mode using two hands.
@@ -184,7 +184,7 @@ Gesture-controlled games, touch-free interfaces, computer-vision learning, inter
 - Sound effects and goal effects.
 - Mobile AR (for example Unity or Vuforia).
 
-## 📄 License
+## License
 
 MIT. See [`LICENSE`](LICENSE).
 
