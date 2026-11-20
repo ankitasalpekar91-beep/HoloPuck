@@ -6,7 +6,21 @@ This guide explains **how HoloPuck works, file by file and frame by frame**, so 
 - **Lecturer:** §3 (pipeline), §5 (vision) and §9 (testing) are the teachable core; [`explanation.md`](explanation.md) maps them to the Image Processing syllabus.
 - **Developer:** §4, §6, §7, §10 and §11.
 
-Contents: 1. What it is · 2. Big picture · 3. The frame pipeline · 4. Coordinates · 5. `vision.py` · 6. `game.py` · 7. `render.py` and `main.py` · 8. Running and options · 9. Testing · 10. Tuning · 11. Extending · 12. Known limitations · 13. Troubleshooting · 14. Glossary
+Contents: 
+1. What it is ·
+2. Big picture ·
+3. The frame pipeline ·
+4. Coordinates ·
+5. `vision.py` ·
+6. `game.py` ·
+7. `render.py` and `main.py` ·
+8. Running and options ·
+9. Testing ·
+10. Tuning ·
+11. Extending ·
+12. Known limitations ·
+13. Troubleshooting ·
+14. Glossary
 
 ---
 
